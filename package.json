@@ -1,0 +1,8 @@
+{
+  "name": "grapher",
+  "version": "0.0.1",
+  "description": "custom graphs creator",
+  "main": "main.js",
+  "author": "HéctorBlisS",
+  "license": "MIT"
+}
