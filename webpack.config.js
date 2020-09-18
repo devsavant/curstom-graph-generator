@@ -2,9 +2,9 @@ let path = require('path')
 
 module.exports = {
     entry: './src/main.js',
-    mode: 'production',
+    mode: 'none',
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: 'genGraph-1.0.js'
+        filename: 'genGraph-0.1.js'
     }
 }
