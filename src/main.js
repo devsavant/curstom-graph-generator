@@ -87,13 +87,13 @@ function drawTriangle(x=80,y=200){
 
 async function drawNumber(number, withFont){
     // const albertFont = new FontFace('FSAlbertNarrow', 'url(fonts/FSAlbertProNarrow-Bold.otf)');
-    if(withFont){
-        const albertFont = new FontFace('FSAlbertNarrow', 'url(https://github.com/jaya-company/curstom-graph-generator/blob/master/src/fonts/FSAlbertProNarrow-Bold.otf)')
-        face = await albertFont.load()
-        document.fonts.add(face);
-    }
+    // if(withFont){
+    //     const albertFont = new FontFace('FSAlbertNarrow', 'url(https://github.com/jaya-company/curstom-graph-generator/blob/master/src/fonts/FSAlbertProNarrow-Bold.otf)')
+    //     face = await albertFont.load()
+    //     document.fonts.add(face);
+    // }
     ctx.fillStyle = "orange";
-    ctx.font = "135px FSAlbertNarrow"
+    ctx.font = withFont ? `135px ${withFont}` : "135px FSAlbertNarrow"
     console.log(number)
     if(number>99){
         ctx.font = "100px FSAlbertNarrow"

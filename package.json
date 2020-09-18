@@ -6,9 +6,11 @@
   "author": "HéctorBlisS",
   "license": "MIT",
   "dependencies": {
-    "serve": "^11.3.2"
+    "serve": "^11.3.2",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
   },
-  "scripts":{
+  "scripts": {
     "start": "serve src"
   }
 }
