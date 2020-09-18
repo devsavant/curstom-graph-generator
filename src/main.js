@@ -87,9 +87,11 @@ function drawTriangle(x=80,y=200){
 
 async function drawNumber(number){
     // const albertFont = new FontFace('FSAlbertNarrow', 'url(fonts/FSAlbertProNarrow-Bold.otf)');
-    const albertFont = new FontFace('FSAlbertNarrow', 'url(https://github.com/jaya-company/curstom-graph-generator/blob/master/src/fonts/FSAlbertProNarrow-Bold.otf)')
-    face = await albertFont.load()
-    document.fonts.add(face);
+    if(withFont){
+        const albertFont = new FontFace('FSAlbertNarrow', 'url(https://github.com/jaya-company/curstom-graph-generator/blob/master/src/fonts/FSAlbertProNarrow-Bold.otf)')
+        face = await albertFont.load()
+        document.fonts.add(face);
+    }
     ctx.fillStyle = "orange";
     ctx.font = "135px FSAlbertNarrow"
     console.log(number)
@@ -130,13 +132,13 @@ function getImage() {
     return fullQuality
 }
 
-async function init(deg=0, number=0){
+async function init(deg=0, number=0, withFont){
     await drawDefaultImage()
     // await rotateElement(drawTriangle)
     // await drawTriangle()
     await drawRotated(deg,drawTriangle)
     await drawCircle()
-    await drawNumber(number)
+    await drawNumber(number, withFont)
     return getImage()
 }
 
@@ -148,9 +150,9 @@ function calculateDeg(num){
     return 2.66*num - 10
 }
 
-function getGraph(number) {
+function getGraph(number, withFont=false) {
     let deg = calculateDeg(number)
-    return init(deg, number) 
+    return init(deg, number, withFont) 
     .then(base64=>base64)
 }
 
