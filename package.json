@@ -4,5 +4,11 @@
   "description": "custom graphs creator",
   "main": "main.js",
   "author": "HéctorBlisS",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^11.3.2"
+  },
+  "scripts":{
+    "start": "serve src"
+  }
 }
