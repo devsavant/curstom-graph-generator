@@ -6,9 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="https://cdn.jsdelivr.net/gh/jaya-company/curstom-graph-generator/src/main.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/jaya-company/curstom-graph-generator/src/main.js"></script> -->
+    <script src="main.js">
+
+    </script>
     <script>
         console.log(getGraph)
+        getGraph(55)
+        .then(url=>{
+            let img = document.createElement('img')
+            img.src = url
+            document.body.appendChild(img)
+        })
     </script>
 </body>
 </html>

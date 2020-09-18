@@ -85,7 +85,7 @@ function drawTriangle(x=80,y=200){
 
 }
 
-async function drawNumber(number){
+async function drawNumber(number, withFont){
     // const albertFont = new FontFace('FSAlbertNarrow', 'url(fonts/FSAlbertProNarrow-Bold.otf)');
     if(withFont){
         const albertFont = new FontFace('FSAlbertNarrow', 'url(https://github.com/jaya-company/curstom-graph-generator/blob/master/src/fonts/FSAlbertProNarrow-Bold.otf)')
