@@ -122,10 +122,10 @@ async function drawCircle(){
 
 function getImage() {
     const fullQuality = canvas.toDataURL("image/png");
-    const img = document.createElement('img')
-    img.setAttribute('crossOrigin', 'anonymous')
-    img.src = fullQuality
-    document.body.appendChild(img)
+    // const img = document.createElement('img')
+    // img.setAttribute('crossOrigin', 'anonymous')
+    // img.src = fullQuality
+    // document.body.appendChild(img)
     return fullQuality
 }
 
@@ -155,7 +155,7 @@ function getGraph(number) {
 
 // let base64Img = getGraph(85)
 
-getGraph(5)
+// getGraph(5)
 // .then(data=>console.log(data))
 
 // 1.- probar canvas en mem **
