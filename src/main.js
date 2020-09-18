@@ -156,8 +156,6 @@ function getGraph(number, withFont=false) {
     .then(base64=>base64)
 }
 
-export default getGraph
-
 // let base64Img = getGraph(85)
 
 // getGraph(5)
