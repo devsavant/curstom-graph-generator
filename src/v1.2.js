@@ -45,7 +45,7 @@ async function drawRotated(degrees=45, drawFunc){
     // if(imgRatio < 1) angleToScale += 90
     // if(angleToScale % 180 == 0)
     //     ctx.scale(ratio, ratio);
-    console.log(degrees) // 123 = -10
+    // console.log(degrees) // 123 = -10
     // let w = (-canvas.width/2) + 0.14*degrees + 1.41
     // let h = (-canvas.height/2) -0.05*degrees - 0.47
 
@@ -86,17 +86,19 @@ function drawTriangle(x=80,y=200){
 }
 
 async function drawNumber(number, withFont){
-    // const albertFont = new FontFace('FSAlbertNarrow', 'url(fonts/FSAlbertProNarrow-Bold.otf)');
-    // if(withFont){
-    //     const albertFont = new FontFace('FSAlbertNarrow', 'url(https://github.com/jaya-company/curstom-graph-generator/blob/master/src/fonts/FSAlbertProNarrow-Bold.otf)')
-    //     face = await albertFont.load()
-    //     document.fonts.add(face);
-    // }
+    if(!withFont){
+        const albertFont = new FontFace('FSAlbertNarrow', 'url(https://jaya-company.github.io/curstom-graph-generator/src/fonts/FSAlbertProNarrow-Bold.otf)');
+        face = await albertFont.load()
+        document.fonts.add(face);
+    }
+
     ctx.fillStyle = "orange";
     ctx.font = withFont ? `135px ${withFont}` : "135px FSAlbertNarrow"
-    console.log(number)
+    // ctx.font = withFont ? `135px ${withFont}` : "135px Libre Baskerville"
+    // console.log(number)
     if(number>99){
         ctx.font = "100px FSAlbertNarrow"
+        // ctx.font = "100px Libre Baskerville"
         ctx.fillText(number, (canvas.width/2)-80, (canvas.height/2)+45)
         return
     }
@@ -133,6 +135,7 @@ function getImage() {
 }
 
 async function init(deg=0, number=0, withFont){
+    ctx.clearRect(0,0,canvas.width, canvas.height)
     await drawDefaultImage()
     // await rotateElement(drawTriangle)
     // await drawTriangle()
