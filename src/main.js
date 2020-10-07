@@ -86,6 +86,16 @@ async function drawCircle(){
 
 }
 
+async function drawCircle(){
+    return new Promise((res)=>{
+        ctx.fillStyle = "white"
+        ctx.beginPath()
+        ctx.arc(canvas.width/2, (canvas.height/2)+12, 80, 0, 2*Math.PI,false)
+        ctx.fill()
+        ctx.closePath()
+        res(true)
+    })
+}
 
 
 async function getImage() {
