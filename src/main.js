@@ -94,6 +94,14 @@ async function getImage() {
     return fullQuality
 }
 
+
+// console.log("url: ", fullQuality)
+
+    // console.log("url: ", fullQuality)
+
+        // console.log("url: ", fullQuality)
+
+
 async function init(deg=0, number=0, withFont){
     await loadFont()
     await drawDefaultImage(deg, number, withFont)
